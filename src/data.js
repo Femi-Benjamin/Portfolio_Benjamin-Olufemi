@@ -11,7 +11,8 @@ import personarise from "./images/personarise.png";
 import elearn from "./images/elearn.png";
 import animefinance from "./images/animefinance.png";
 import cardify from "./images/cardify.png";
-import bloom from "./images/bloom.png";
+import titan from "./images/titan.png";
+// import bloom from "./images/bloom.png";
 import img7 from "./images/html.png";
 import img8 from "./images/css.png";
 import img9 from "./images/js.png";
@@ -89,6 +90,14 @@ export const Experience = [
 export const Projects = [
   {
     id: 1,
+    name: "TitanLeap Website",
+    imageSrc: titan,
+    techs: "React Js, Typescript, TailwindCSS",
+    github: "https://github.com/Femi-Benjamin/Titan-leap",
+    livelink: "https://titan-leap-ruddy.vercel.app/",
+  },
+  {
+    id: 2,
     name: "HealthCare Management System",
     imageSrc: Healthcare,
     techs: "React Js, TailwindCSS, Material UI, MySQL",
@@ -96,7 +105,7 @@ export const Projects = [
     livelink: "https://healthcare-app.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     name: "personarise Web App ",
     imageSrc: personarise,
     techs: "React Js, Tailwind CSS, Material UI",
@@ -104,7 +113,7 @@ export const Projects = [
     // livelink:"",
   },
   {
-    id: 3,
+    id: 4,
     name: "E-Learning Platform",
     imageSrc: elearn,
     techs: "React Js, Chakra UI, TailwindCSS",
@@ -112,7 +121,7 @@ export const Projects = [
     livelink: "https://e-learn-project1.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     name: "Anime Finance 1.0",
     imageSrc: animefinance,
     techs: "React Js,  Material UI",
@@ -120,21 +129,21 @@ export const Projects = [
     livelink: "https://anime-finance-five.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     name: "Cardify",
     imageSrc: cardify,
     techs: "React Js, TailwindCSS, Chara UI, Firebase",
     github: "https://github.com/Femi-Benjamin/Cardify",
     livelink: "https://cardify-bice.vercel.app/",
   },
-  {
-    id: 6,
-    name: "Bloom Pet Clinic",
-    imageSrc: bloom,
-    techs: "React.Js, Styled component, Material UI, FakerApi",
-    github: "https://github.com/Femi-Benjamin/bloom-pet-clinic",
-    // livelink:"",
-  },
+  // {
+  //   id: 6,
+  //   name: "Bloom Pet Clinic",
+  //   imageSrc: bloom,
+  //   techs: "React.Js, Styled component, Material UI, FakerApi",
+  //   github: "https://github.com/Femi-Benjamin/bloom-pet-clinic",
+  //   // livelink:"",
+  // },
 ];
 
 export const SocialLinks = [
