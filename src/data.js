@@ -167,7 +167,7 @@ export const SocialLinks = [
       <IoLogoTwitter className="text-blue-500 text-3xl cursor-pointer" />
     ),
     name: "Twitter",
-    link: "https://twitter.com/FemiBenjamin7",
+    link: "https://twitter.com/Mr1Best",
   },
   {
     id: 1,
