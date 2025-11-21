@@ -12,6 +12,7 @@ import elearn from "./images/elearn.png";
 import animefinance from "./images/animefinance.png";
 import cardify from "./images/cardify.png";
 import titan from "./images/titan.png";
+import dhees from "./images/dhees.png";
 // import bloom from "./images/bloom.png";
 import img7 from "./images/html.png";
 import img8 from "./images/css.png";
@@ -95,6 +96,14 @@ export const Projects = [
     techs: "React Js, Typescript, TailwindCSS",
     github: "https://github.com/Femi-Benjamin/Titan-leap",
     livelink: "https://titan-leap-ruddy.vercel.app/",
+  },
+  {
+    id: 1,
+    name: "DHEE'S ORGANIC HAIR",
+    imageSrc: dhees,
+    techs: "React Js, TailwindCSS",
+    github: "https://github.com/Femi-Benjamin/",
+    livelink: "https://dhee-s-royal-growth.vercel.app/",
   },
   {
     id: 2,
