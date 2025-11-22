@@ -56,7 +56,7 @@ const Contact = () => {
                         <h3 className="text-2xl font-bold text-slate-100">Let's Collaborate</h3>
                         <p className="text-slate-300 leading-relaxed">
                             I'm always open to discussing product design work or partnership opportunities.
-                            Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                            Whether you have a question or just want to say hi, I will get back to you!!
                         </p>
 
                         <div className="space-y-6">
@@ -88,7 +88,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-slate-500">Location</p>
-                                    <p>Available Remote</p>
+                                    <p>Available Hybrid/Remote</p>
                                 </div>
                             </div>
                         </div>

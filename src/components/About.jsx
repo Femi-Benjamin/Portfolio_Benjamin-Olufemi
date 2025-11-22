@@ -62,7 +62,7 @@ const About = () => {
 
                         <div className="mt-8 flex gap-4">
                             <div className="flex flex-col">
-                                <span className="text-3xl font-bold text-white">3+</span>
+                                <span className="text-3xl font-bold text-white">3.5+</span>
                                 <span className="text-sm text-slate-400 uppercase tracking-wider">Years Exp.</span>
                             </div>
                             <div className="w-px h-12 bg-slate-700"></div>
@@ -72,7 +72,7 @@ const About = () => {
                             </div>
                             <div className="w-px h-12 bg-slate-700"></div>
                             <div className="flex flex-col">
-                                <span className="text-3xl font-bold text-white">10+</span>
+                                <span className="text-3xl font-bold text-white">15+</span>
                                 <span className="text-sm text-slate-400 uppercase tracking-wider">Clients</span>
                             </div>
                         </div>
