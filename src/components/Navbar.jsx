@@ -39,7 +39,8 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             // href="https://drive.google.com/file/d/1ZG_0SUKMdOg2J59cIQZg6NsvcKTTSGu_/view?usp=sharing"
-            href="https://flowcv.com/resume/7ptl1beu34s2"
+            // href="https://flowcv.com/resume/7ptl1beu34s2"
+            href="https://drive.google.com/file/d/1-QOcPyV8vGU8iDpMXfOnB2YGYXD9otGS/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white text-sm font-semibold shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all"
@@ -77,7 +78,8 @@ const Navbar = () => {
               ))}
               <a
                 // href="https://drive.google.com/file/d/1ZG_0SUKMdOg2J59cIQZg6NsvcKTTSGu_/view?usp=sharing"
-                href="https://flowcv.com/resume/7ptl1beu34s2"
+                // href="https://flowcv.com/resume/7ptl1beu34s2"
+                href="https://drive.google.com/file/d/1-QOcPyV8vGU8iDpMXfOnB2YGYXD9otGS/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-center py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl text-white font-semibold"
