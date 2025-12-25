@@ -94,11 +94,11 @@ export const Experience = [
 export const Projects = [
   {
     id: 1,
-    name: "SPENDWISE Track your spending at a glance",
+    name: "SPENDWISE",
     imageSrc: spendwise,
-    techs: "React Js, Typescript, TailwindCSS",
+    techs: "React Js, Typescript, TailwindCSS, Shadcn UI",
     github: "https://github.com/Femi-Benjamin/spendwise-your-personal-finance-companion",
-    livelink: "https://spendwise-your-personal-finance-companion.vercel.app/",
+    livelink: "https://spendwise-your-personal-finance-com.vercel.app/",
   },
   {
     id: 2,
@@ -112,7 +112,7 @@ export const Projects = [
     id: 3,
     name: "CHARM COMMERCE WEBSITE",
     imageSrc: shoe,
-    techs: "React Js, TailwindCSS",
+    techs: "React Js, Typescript, TailwindCSS",
     github: "https://github.com/Femi-Benjamin/charm-commerce-ui",
     livelink: "https://charm-commerce-ui.vercel.app/",
   },
