@@ -6,70 +6,8 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full h-screen overflow-hidden bg-slate-950"
+      className="relative w-full h-screen overflow-hidden bg-transparent"
     >
-      {/* Animated Gradient Orbs Background - Only on Desktop */}
-      <div className="absolute inset-0 z-0 overflow-hidden hidden lg:block">
-        {/* Orb 1 - Cyan */}
-        <motion.div
-          animate={{
-            x: [0, 100, -50, 0],
-            y: [0, -100, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute w-96 h-96 bg-cyan-500 rounded-full blur-3xl opacity-20 -top-20 -left-20"
-        />
-
-        {/* Orb 2 - Purple */}
-        <motion.div
-          animate={{
-            x: [0, -80, 60, 0],
-            y: [0, 120, -40, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute w-80 h-80 bg-purple-600 rounded-full blur-3xl opacity-20 -bottom-20 -right-20"
-        />
-
-        {/* Orb 3 - Blue */}
-        <motion.div
-          animate={{
-            x: [0, 120, -100, 0],
-            y: [0, 80, -80, 0],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute w-72 h-72 bg-blue-500 rounded-full blur-3xl opacity-15 top-1/2 right-1/4"
-        />
-
-        {/* Orb 4 - Cyan (accent) */}
-        <motion.div
-          animate={{
-            x: [0, -100, 80, 0],
-            y: [0, -120, 60, 0],
-          }}
-          transition={{
-            duration: 28,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute w-64 h-64 bg-cyan-400 rounded-full blur-3xl opacity-10 bottom-1/4 left-1/3"
-        />
-
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/0 via-slate-950/30 to-slate-950/50" />
-      </div>
-
       {/* Background Spline - Only on Mobile */}
       <div className="absolute inset-0 z-0 md:hidden">
         <Spline scene="https://prod.spline.design/Z31F8KCKhr798Pgt/scene.splinecode" />

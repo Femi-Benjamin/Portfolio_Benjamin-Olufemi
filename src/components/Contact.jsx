@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <section
       id="contacts"
-      className="w-full py-20 bg-slate-950 text-white relative"
+      className="w-full py-20 bg-transparent text-white relative"
     >
       <div className="max-w-6xl mx-auto px-4">
         <motion.div

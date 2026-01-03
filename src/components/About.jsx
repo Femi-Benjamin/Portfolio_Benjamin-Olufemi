@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full py-20 bg-slate-950 text-white relative overflow-hidden"
+      className="w-full py-20 bg-transparent text-white relative overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <motion.div
