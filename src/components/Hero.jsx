@@ -23,7 +23,7 @@ const Hero = () => {
             className="mb-6"
           >
             <span className="py-2 px-4 rounded-full bg-slate-900/50 backdrop-blur-md border border-slate-700 text-cyan-400 text-sm font-medium tracking-wider uppercase">
-              Portfolio 2025
+              Portfolio {new Date().getFullYear()}
             </span>
           </motion.div>
 
