@@ -14,6 +14,7 @@ import {
     SiNextdotjs,
     SiTailwindcss,
     SiFramer,
+    SiNodedotjs
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -54,7 +55,10 @@ const Skills = () => {
         },
         {
             title: "Backend & State",
-            skills: [{ name: "Supabase", type: "icon", icon: <SiSupabase />, color: "#3ECF8E" }],
+            skills: [
+                { name: "Supabase", type: "icon", icon: <SiSupabase />, color: "#3ECF8E" },
+                { name: "Node.js", type: "icon", icon: <SiNodedotjs />, color: "#3ECF8E" }
+            ],
         },
     ];
 
@@ -87,9 +91,9 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: catIndex * 0.1 }}
-                            className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition-colors"
+                            className="xl:bg-transparent bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 hover:border-slate-600 transition-colors"
                         >
-                            <h3 className="text-xl font-bold mb-6 border-b border-slate-700/50 pb-2 bg-gradient-to-b from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+                            <h3 className="text-xl font-bold mb-6 border-b border-slate-700/50 pb-2 bg-gradient-to-b from-cyan-400 to-purple-600 bg-clip-text text-transparent xl:text-left text-center">
                                 {category.title}
                             </h3>
                             <div className="flex flex-wrap gap-4">
@@ -100,7 +104,7 @@ const Skills = () => {
                                         className="flex flex-col items-center gap-2 group cursor-pointer"
                                     >
                                         <div
-                                            className="w-16 h-16 flex items-center justify-center bg-slate-800/50 rounded-xl p-3 border border-slate-700/50 group-hover:border-[var(--hover-color)] group-hover:bg-slate-800 transition-all duration-300 shadow-lg shadow-black/20"
+                                            className="w-16 h-16 flex items-center justify-center rounded-xl p-3 border border-slate-700/50 group-hover:border-[var(--hover-color)] group-hover:bg-slate-800 transition-all duration-300 shadow-lg shadow-black/20"
                                             style={{ "--hover-color": skill.color || "#22d3ee" }}
                                         >
                                             <div className="text-3xl text-slate-400 group-hover:text-[var(--hover-color)] transition-colors">

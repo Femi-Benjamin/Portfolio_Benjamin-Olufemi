@@ -102,7 +102,7 @@ export const Projects = [
   },
   {
     id: 2,
-    name: "TITAN LEAP WEBSITE",
+    name: "TITAN LEAP",
     imageSrc: titan,
     techs: "React Js, Typescript, TailwindCSS",
     github: "https://github.com/Femi-Benjamin/Titan-leap",
@@ -110,7 +110,7 @@ export const Projects = [
   },
   {
     id: 3,
-    name: "CHARM COMMERCE WEBSITE",
+    name: "CHARM COMMERCE",
     imageSrc: shoe,
     techs: "React Js, TailwindCSS",
     github: "https://github.com/Femi-Benjamin/charm-commerce-ui",
