@@ -40,7 +40,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-white">
                 Benjamin Olufemi
               </h3>
-              <p className="text-cyan-400">Frontend Developer</p>
+              <p className="text-cyan-400">Frontend/Web3 Developer</p>
             </div>
           </motion.div>
 
