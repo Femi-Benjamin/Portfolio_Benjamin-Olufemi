@@ -9,6 +9,7 @@ import {
 import Healthcare from "./images/Healthcare.png";
 import personarise from "./images/personarise.png";
 import elearn from "./images/elearn.png";
+import web3 from "./images/web3.png";
 import animefinance from "./images/animefinance.png";
 import cardify from "./images/cardify.png";
 import titan from "./images/titan.png";
@@ -94,6 +95,14 @@ export const Experience = [
 export const Projects = [
   {
     id: 1,
+    name: "MY WEB3 HUB",
+    imageSrc: web3,
+    techs: "React Js, Typescript, TailwindCSS",
+    github: "https://github.com/Femi-Benjamin/my-web3-hub",
+    livelink: "https://my-web3-hub.vercel.app/",
+  },
+  {
+    id: 2,
     name: "SPENDWISE",
     imageSrc: spendwise,
     techs: "React Js, Typescript, TailwindCSS",

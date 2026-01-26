@@ -56,7 +56,7 @@ const About = () => {
               Hello, I'm <span className="text-cyan-400">Benjamin</span> 👋
             </h3>
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              A frontend developer passionate about converting designs into
+              A frontend/Web3 developer passionate about converting designs into
               pixel-perfect code. I specialize in creating interactive and
               user-friendly web applications using modern technologies like
               React.js, Next.js, JavaScript, and Tailwind CSS.
