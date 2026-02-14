@@ -146,7 +146,7 @@ const Skills = () => {
                       className="w-16 h-16 flex items-center justify-center rounded-xl p-3 border border-slate-700/50 group-hover:border-[var(--hover-color)] group-hover:bg-slate-800 transition-all duration-300 shadow-lg shadow-black/20"
                       style={{ "--hover-color": skill.color || "#22d3ee" }}
                     >
-                      <div className="text-3xl text-slate-400 group-hover:text-[var(--hover-color)] transition-colors">
+                      <div className="text-3xl text-[var(--hover-color)] transition-colors">
                         {skill.icon}
                       </div>
                     </div>

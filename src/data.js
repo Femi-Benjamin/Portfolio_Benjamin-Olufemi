@@ -17,6 +17,7 @@ import dhees from "./images/dhees.png";
 import arctic from "./images/arctic.png";
 import shoe from "./images/shoe.png";
 import spendwise from "./images/spendwise.png";
+import vault from "./images/vault.png";
 // import bloom from "./images/bloom.png";
 import img7 from "./images/html.png";
 import img8 from "./images/css.png";
@@ -66,7 +67,7 @@ export const Experience = [
     iconsSrc: <IoCodeWorking />,
     job: "Internship",
     title: "PERSONARISE",
-    lcation: "Doha, Qatar",
+    location: "Doha, Qatar",
     description:
       "Developed the landing page and worked on the web application of the Personarise platform, a platform hoping to revolutionize the interconnctions between Interns and Founders who are looking for real-world experience and career growth.",
   },
@@ -95,6 +96,14 @@ export const Experience = [
 export const Projects = [
   {
     id: 1,
+    name: "FAITH VAULT",
+    imageSrc: vault,
+    techs: "React Js, Typescript, Framer Motion, TailwindCSS",
+    github: "https://github.com/Femi-Benjamin/faith-media-hub",
+    livelink: "https://faith-vault.vercel.app/",
+  },
+  {
+    id: 2,
     name: "MY WEB3 HUB",
     imageSrc: web3,
     techs: "React Js, Typescript, TailwindCSS",
@@ -102,7 +111,7 @@ export const Projects = [
     livelink: "https://my-web3-hub.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     name: "SPENDWISE",
     imageSrc: spendwise,
     techs: "React Js, Typescript, TailwindCSS",
@@ -110,7 +119,7 @@ export const Projects = [
     livelink: "https://spendwise-your-personal-finance-com.vercel.app/",
   },
   {
-    id: 2,
+    id: 4,
     name: "TITAN LEAP",
     imageSrc: titan,
     techs: "React Js, Typescript, TailwindCSS",
@@ -118,7 +127,7 @@ export const Projects = [
     livelink: "https://titan-leap-ruddy.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     name: "DHEE'S ORGANIC HAIR",
     imageSrc: dhees,
     techs: "React Js, TailwindCSS",
@@ -126,7 +135,7 @@ export const Projects = [
     livelink: "https://dhee-s-royal-growth.vercel.app/",
   },
   {
-    id: 3,
+    id: 6,
     name: "CHARM COMMERCE",
     imageSrc: shoe,
     techs: "React Js, TailwindCSS",
@@ -134,7 +143,7 @@ export const Projects = [
     livelink: "https://charm-commerce-ui.vercel.app/",
   },
   {
-    id: 5,
+    id: 7,
     name: "ARCTIC TRAVEL AGENCY",
     imageSrc: arctic,
     techs: "React Js, TailwindCSS",
@@ -142,7 +151,7 @@ export const Projects = [
     livelink: "https://arctic-travels-two.vercel.app/",
   },
   {
-    id: 6,
+    id: 8,
     name: "HEALTH CARE MANAGEMENT SYSTEM",
     imageSrc: Healthcare,
     techs: "React Js, TailwindCSS, Material UI, MySQL",
@@ -150,7 +159,7 @@ export const Projects = [
     livelink: "https://healthcare-app.vercel.app/",
   },
   {
-    id: 8,
+    id: 9,
     name: "E-LEARNING PLATFORM",
     imageSrc: elearn,
     techs: "React Js, Chakra UI, TailwindCSS",
@@ -166,7 +175,7 @@ export const Projects = [
     livelink: "https://cardify-bice.vercel.app/",
   },
   {
-    id: 9,
+    id: 11,
     name: "Anime Finance 1.0",
     imageSrc: animefinance,
     techs: "React Js, Material UI",
@@ -174,21 +183,13 @@ export const Projects = [
     livelink: "https://anime-finance-five.vercel.app/",
   },
   {
-    id: 7,
+    id: 12,
     name: "PERSONARISE WEB APP",
     imageSrc: personarise,
     techs: "React Js, Tailwind CSS, Material UI",
     github: "https://github.com/Femi-Benjamin/Personarise-Project",
     // livelink:"",
   },
-  // {
-  //   id: 6,
-  //   name: "Bloom Pet Clinic",
-  //   imageSrc: bloom,
-  //   techs: "React.Js, Styled component, Material UI, FakerApi",
-  //   github: "https://github.com/Femi-Benjamin/bloom-pet-clinic",
-  //   // livelink:"",
-  // },
 ];
 
 export const SocialLinks = [
@@ -199,7 +200,7 @@ export const SocialLinks = [
     link: "https://github.com/Femi-Benjamin",
   },
   {
-    id: 1,
+    id: 2,
     iconSrc: (
       <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
     ),
@@ -207,7 +208,7 @@ export const SocialLinks = [
     link: "https://www.linkedin.com/in/benjamin-olufemi-7524ab226/",
   },
   {
-    id: 1,
+    id: 3,
     iconSrc: (
       <IoLogoTwitter className="text-blue-500 text-3xl cursor-pointer" />
     ),
@@ -215,7 +216,7 @@ export const SocialLinks = [
     link: "https://twitter.com/Mr1Best",
   },
   {
-    id: 1,
+    id: 4,
     iconSrc: (
       <IoLogoWhatsapp className="text-green-500 text-3xl cursor-pointer" />
     ),
