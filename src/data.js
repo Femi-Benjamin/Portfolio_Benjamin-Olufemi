@@ -13,7 +13,7 @@ import web3 from "./images/web3.png";
 import animefinance from "./images/animefinance.png";
 import cardify from "./images/cardify.png";
 import titan from "./images/titan.png";
-import dhees from "./images/dhees.png";
+import unique from "./images/unique.png";
 import arctic from "./images/arctic.png";
 import shoe from "./images/shoe.png";
 import spendwise from "./images/spendwise.png";
@@ -128,11 +128,11 @@ export const Projects = [
   },
   {
     id: 5,
-    name: "DHEE'S ORGANIC HAIR",
-    imageSrc: dhees,
+    name: "UNIQUE HAIR TREATMENT",
+    imageSrc: unique,
     techs: "React Js, TailwindCSS",
-    github: "https://github.com/Femi-Benjamin/",
-    livelink: "https://dhee-s-royal-growth.vercel.app/",
+    github: "https://github.com/Femi-Benjamin/Unique-Hair-Treatment",
+    livelink: "https://unique-hair-treatment.vercel.app/",
   },
   {
     id: 6,
