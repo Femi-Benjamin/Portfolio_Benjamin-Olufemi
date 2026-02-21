@@ -10,6 +10,7 @@ import Healthcare from "./images/Healthcare.png";
 import personarise from "./images/personarise.png";
 import elearn from "./images/elearn.png";
 import web3 from "./images/web3.png";
+import web from "./images/web.png";
 import animefinance from "./images/animefinance.png";
 import cardify from "./images/cardify.png";
 import titan from "./images/titan.png";
@@ -96,11 +97,11 @@ export const Experience = [
 export const Projects = [
   {
     id: 1,
-    name: "FAITH VAULT",
-    imageSrc: vault,
-    techs: "React Js, Typescript, Framer Motion, TailwindCSS",
-    github: "https://github.com/Femi-Benjamin/faith-media-hub",
-    livelink: "https://faith-vault.vercel.app/",
+    name: "WEB3 | FRONTEND PORTFOLIO",
+    imageSrc: web,
+    techs: "React Js, Typescript, TailwindCSS",
+    github: "https://github.com/Femi-Benjamin/Benjamin-Olufemi_Web3-Portfolio ",
+    livelink: "https://benjamin-olufemi-web3-portfolio.vercel.app/ ",
   },
   {
     id: 2,
@@ -112,14 +113,6 @@ export const Projects = [
   },
   {
     id: 3,
-    name: "SPENDWISE",
-    imageSrc: spendwise,
-    techs: "React Js, Typescript, TailwindCSS",
-    github: "https://github.com/Femi-Benjamin/spendwise-your-personal-finance-companion",
-    livelink: "https://spendwise-your-personal-finance-com.vercel.app/",
-  },
-  {
-    id: 4,
     name: "TITAN LEAP",
     imageSrc: titan,
     techs: "React Js, Typescript, TailwindCSS",
@@ -127,7 +120,23 @@ export const Projects = [
     livelink: "https://titan-leap-ruddy.vercel.app/",
   },
   {
+    id: 4,
+    name: "FAITH VAULT",
+    imageSrc: vault,
+    techs: "React Js, Typescript, Framer Motion, TailwindCSS",
+    github: "https://github.com/Femi-Benjamin/faith-media-hub",
+    livelink: "https://faith-vault.vercel.app/",
+  },
+  {
     id: 5,
+    name: "SPENDWISE",
+    imageSrc: spendwise,
+    techs: "React Js, Typescript, TailwindCSS",
+    github: "https://github.com/Femi-Benjamin/spendwise-your-personal-finance-companion",
+    livelink: "https://spendwise-your-personal-finance-com.vercel.app/",
+  },
+  {
+    id: 6,
     name: "UNIQUE HAIR TREATMENT",
     imageSrc: unique,
     techs: "React Js, TailwindCSS",
@@ -135,7 +144,7 @@ export const Projects = [
     livelink: "https://unique-hair-treatment.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     name: "CHARM COMMERCE",
     imageSrc: shoe,
     techs: "React Js, TailwindCSS",
@@ -143,7 +152,7 @@ export const Projects = [
     livelink: "https://charm-commerce-ui.vercel.app/",
   },
   {
-    id: 7,
+    id: 8,
     name: "ARCTIC TRAVEL AGENCY",
     imageSrc: arctic,
     techs: "React Js, TailwindCSS",
@@ -151,7 +160,7 @@ export const Projects = [
     livelink: "https://arctic-travels-two.vercel.app/",
   },
   {
-    id: 8,
+    id: 9,
     name: "HEALTH CARE MANAGEMENT SYSTEM",
     imageSrc: Healthcare,
     techs: "React Js, TailwindCSS, Material UI, MySQL",
@@ -159,7 +168,7 @@ export const Projects = [
     livelink: "https://healthcare-app.vercel.app/",
   },
   {
-    id: 9,
+    id: 10,
     name: "E-LEARNING PLATFORM",
     imageSrc: elearn,
     techs: "React Js, Chakra UI, TailwindCSS",
@@ -167,7 +176,7 @@ export const Projects = [
     livelink: "https://e-learn-project1.vercel.app/",
   },
   {
-    id: 10,
+    id: 11,
     name: "Cardify",
     imageSrc: cardify,
     techs: "React Js, TailwindCSS, Chara UI, Firebase",
@@ -175,7 +184,7 @@ export const Projects = [
     livelink: "https://cardify-bice.vercel.app/",
   },
   {
-    id: 11,
+    id: 12,
     name: "Anime Finance 1.0",
     imageSrc: animefinance,
     techs: "React Js, Material UI",
@@ -183,7 +192,7 @@ export const Projects = [
     livelink: "https://anime-finance-five.vercel.app/",
   },
   {
-    id: 12,
+    id: 13,
     name: "PERSONARISE WEB APP",
     imageSrc: personarise,
     techs: "React Js, Tailwind CSS, Material UI",
