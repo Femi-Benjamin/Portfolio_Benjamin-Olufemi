@@ -1,4 +1,4 @@
-# ⚡ Benjamin Olufemi — Modern 3D & Glassmorphic Portfolio
+# ⚡ Benjamin Olufemi — Portfolio
 
 <div align="center">
 
