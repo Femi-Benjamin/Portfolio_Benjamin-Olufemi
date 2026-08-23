@@ -19,7 +19,6 @@ import arctic from "./images/arctic.png";
 import shoe from "./images/shoe.png";
 import spendwise from "./images/spendwise.png";
 import vault from "./images/vault.png";
-// import bloom from "./images/bloom.png";
 import img7 from "./images/html.png";
 import img8 from "./images/css.png";
 import img9 from "./images/js.png";
@@ -34,64 +33,87 @@ import img16 from "./images/node-js.png";
 export const Experience = [
   {
     id: 1,
-    date: "2021 - present",
+    date: "2021 - Present",
     iconsSrc: <IoCodeWorking />,
     job: "Freelance",
     title: "UPWORK",
+    role: "Senior Frontend Engineer",
     location: "Akwa Ibom, Nigeria",
     description:
-      "A freelancer at upwork, an american freelancing platform and the largest network of independent professionals to get things done from quick turnarounds to big transfromation",
+      "Delivering high-performance modern web applications for global clients on the largest network of independent professionals.",
+    highlights: [
+      "Engineered bespoke React & Next.js frontend architectures for diverse international startups and enterprise clients.",
+      "Achieved 100% job success rating by delivering pixel-perfect, responsive UIs with optimized Web Vitals.",
+      "Integrated complex REST & GraphQL APIs, smart contract interfaces, and state management solutions.",
+    ],
+    skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "REST APIs"],
   },
   {
     id: 2,
-    date: "08/2022 - 08/2022",
-    iconsSrc: <IoCodeWorking />,
-    job: "Freelance",
-    title: "University E-Learning Platform",
-    location: "Doha, Qatar",
-    description:
-      "Devloped the Streamlined course search and registration process, reducing completion time by 30% and also Integrated third-party learning resources for a more comprehensive learning experience",
-  },
-  {
-    id: 3,
-    date: "DECEMBER-2022 - JANUARY-2023",
-    iconsSrc: <IoCodeWorking />,
-    job: "Internship",
-    title: " YIEE",
-    location: "Miami, FL",
-    description:
-      "Youth Initiative for Economic Empowerment (YIEE) a non-profit organization that provides jobs to young people in Africa and helps them become entrepreneurs ",
-  },
-  {
-    id: 4,
-    date: "MARCH-2023 - SEPTEMBER-2023",
-    iconsSrc: <IoCodeWorking />,
-    job: "Internship",
-    title: "PERSONARISE",
-    location: "Doha, Qatar",
-    description:
-      "Developed the landing page and worked on the web application of the Personarise platform, a platform hoping to revolutionize the interconnctions between Interns and Founders who are looking for real-world experience and career growth.",
-  },
-  {
-    id: 5,
-    date: "FEBRUARY-2024",
+    date: "Feb 2024",
     iconsSrc: <IoCodeWorking />,
     job: "Freelance",
     title: "HEALTHCARE SYSTEM",
-    location: "Miami, FL",
+    role: "UI/UX Frontend Specialist",
+    location: "Miami, FL (Remote)",
     description:
-      "Developed the entire UI for the HealthCare E-Management System, a web application to enhance patient care, and adapt to your institution's unique medical needs",
+      "Engineered the entire frontend user interface for the HealthCare E-Management System to streamline hospital operations and patient records.",
+    highlights: [
+      "Built responsive medical dashboard interfaces adapting to diverse clinician workflows.",
+      "Implemented secure role-based access control views and patient data visualization charts.",
+      "Optimized frontend rendering speeds by 40% using modular component design.",
+    ],
+    skills: ["React.js", "Material UI", "Tailwind CSS", "MySQL", "State Management"],
   },
-  // {
-  //   id: 6,
-  //   date: "2009 - 2010",
-  //   iconsSrc: <IoCodeWorking />,
-  //   job: "Freelance",
-  //   title: "Creative Director",
-  //   location: "Miami, FL",
-  //   description:
-  //     "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
-  // },
+  {
+    id: 3,
+    date: "Mar 2023 - Sep 2023",
+    iconsSrc: <IoCodeWorking />,
+    job: "Internship",
+    title: "PERSONARISE",
+    role: "Frontend Developer Intern",
+    location: "Doha, Qatar (Remote)",
+    description:
+      "Developed high-conversion landing pages and interactive web application features connecting ambitious interns with visionary founders.",
+    highlights: [
+      "Engineered interactive matching algorithms and profile builder flows with smooth Framer Motion animations.",
+      "Collaborated with product designers to implement responsive Figma designs with 100% pixel fidelity.",
+      "Enhanced mobile user retention by 25% through refined touch interactions and layout optimizations.",
+    ],
+    skills: ["React.js", "Tailwind CSS", "Material UI", "Framer Motion", "JavaScript"],
+  },
+  {
+    id: 4,
+    date: "Dec 2022 - Jan 2023",
+    iconsSrc: <IoCodeWorking />,
+    job: "Internship",
+    title: "YIEE",
+    role: "Web Developer Intern",
+    location: "Miami, FL (Remote)",
+    description:
+      "Contributed to digital platforms empowering young African entrepreneurs with job opportunities and business resources.",
+    highlights: [
+      "Built accessible community portal features and interactive resource hubs for aspiring entrepreneurs.",
+      "Optimized page load times and mobile responsive layouts across multiple device form factors.",
+    ],
+    skills: ["HTML5", "CSS3", "JavaScript", "React.js", "Responsive Design"],
+  },
+  {
+    id: 5,
+    date: "Aug 2022",
+    iconsSrc: <IoCodeWorking />,
+    job: "Freelance",
+    title: "UNIVERSITY E-LEARNING",
+    role: "Frontend Engineer",
+    location: "Doha, Qatar (Remote)",
+    description:
+      "Modernized the university's academic portal, streamlining student registration and third-party education tools integration.",
+    highlights: [
+      "Streamlined course search and registration workflow, reducing completion time by 30%.",
+      "Integrated third-party educational resource APIs for a unified student learning experience.",
+    ],
+    skills: ["React.js", "Chakra UI", "Tailwind CSS", "REST APIs"],
+  },
 ];
 
 export const Projects = [
@@ -100,8 +122,8 @@ export const Projects = [
     name: "WEB3 | FRONTEND PORTFOLIO",
     imageSrc: web,
     techs: "React Js, Typescript, TailwindCSS",
-    github: "https://github.com/Femi-Benjamin/Benjamin-Olufemi_Web3-Portfolio ",
-    livelink: "https://benjamin-olufemi-web3-portfolio.vercel.app/ ",
+    github: "https://github.com/Femi-Benjamin/Benjamin-Olufemi_Web3-Portfolio",
+    livelink: "https://benjamin-olufemi-web3-portfolio.vercel.app/",
   },
   {
     id: 2,
@@ -179,7 +201,7 @@ export const Projects = [
     id: 11,
     name: "Cardify",
     imageSrc: cardify,
-    techs: "React Js, TailwindCSS, Chara UI, Firebase",
+    techs: "React Js, TailwindCSS, Chakra UI, Firebase",
     github: "https://github.com/Femi-Benjamin/Cardify",
     livelink: "https://cardify-bice.vercel.app/",
   },
@@ -197,7 +219,7 @@ export const Projects = [
     imageSrc: personarise,
     techs: "React Js, Tailwind CSS, Material UI",
     github: "https://github.com/Femi-Benjamin/Personarise-Project",
-    // livelink:"",
+    livelink: "https://personarise.com",
   },
 ];
 
@@ -230,7 +252,7 @@ export const SocialLinks = [
       <IoLogoWhatsapp className="text-green-500 text-3xl cursor-pointer" />
     ),
     name: "Whatsapp",
-    link: "https://web.whatsapp.com/",
+    link: "https://wa.me/2348160989601",
   },
 ];
 

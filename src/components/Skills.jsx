@@ -23,80 +23,40 @@ import { VscVscode } from "react-icons/vsc";
 const Skills = () => {
   const categories = [
     {
-      title: "Core Web",
+      title: "Core Web Technologies",
       skills: [
-        { name: "HTML 5", type: "icon", icon: <SiHtml5 />, color: "#E34F26" },
-        { name: "CSS 3", type: "icon", icon: <SiCss3 />, color: "#1572B6" },
-        {
-          name: "JavaScript",
-          type: "icon",
-          icon: <SiJavascript />,
-          color: "#F7DF1E",
-        },
-        {
-          name: "TypeScript",
-          type: "icon",
-          icon: <SiTypescript />,
-          color: "#3178C6",
-        },
+        { name: "HTML 5", icon: <SiHtml5 />, color: "#E34F26" },
+        { name: "CSS 3", icon: <SiCss3 />, color: "#1572B6" },
+        { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
+        { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
       ],
     },
     {
       title: "Frameworks & Libraries",
       skills: [
-        { name: "React", type: "icon", icon: <SiReact />, color: "#61DAFB" },
-        {
-          name: "Next.js",
-          type: "icon",
-          icon: <SiNextdotjs />,
-          color: "#ffffff",
-        },
-        {
-          name: "Tailwind CSS",
-          type: "icon",
-          icon: <SiTailwindcss />,
-          color: "#06B6D4",
-        },
-        {
-          name: "Framer Motion",
-          type: "icon",
-          icon: <SiFramer />,
-          color: "#0055FF",
-        },
+        { name: "React", icon: <SiReact />, color: "#61DAFB" },
+        { name: "Next.js", icon: <SiNextdotjs />, color: "#FFFFFF" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06B6D4" },
+        { name: "Framer Motion", icon: <SiFramer />, color: "#0055FF" },
       ],
     },
     {
-      title: "Tools & Platforms",
+      title: "Tools & Ecosystem",
       skills: [
-        { name: "Git", type: "icon", icon: <SiGit />, color: "#F05032" },
-        { name: "GitHub", type: "icon", icon: <SiGithub />, color: "#ffffff" },
-        { name: "Vercel", type: "icon", icon: <SiVercel />, color: "#ffffff" },
-        { name: "Vite", type: "icon", icon: <SiVite />, color: "#ffffff" },
-        { name: "Npm", type: "icon", icon: <SiNpm />, color: "#ffffff" },
-        { name: "Figma", type: "icon", icon: <SiFigma />, color: "#F24E1E" },
-        {
-          name: "VS Code",
-          type: "icon",
-          icon: <VscVscode />,
-          color: "#007ACC",
-        },
+        { name: "Git", icon: <SiGit />, color: "#F05032" },
+        { name: "GitHub", icon: <SiGithub />, color: "#FFFFFF" },
+        { name: "Vercel", icon: <SiVercel />, color: "#FFFFFF" },
+        { name: "Vite", icon: <SiVite />, color: "#9333EA" },
+        { name: "Npm", icon: <SiNpm />, color: "#CB3837" },
+        { name: "Figma", icon: <SiFigma />, color: "#F24E1E" },
+        { name: "VS Code", icon: <VscVscode />, color: "#007ACC" },
       ],
     },
     {
-      title: "Backend & State",
+      title: "Backend & Database",
       skills: [
-        {
-          name: "Supabase",
-          type: "icon",
-          icon: <SiSupabase />,
-          color: "#3ECF8E",
-        },
-        {
-          name: "Node.js",
-          type: "icon",
-          icon: <SiNodedotjs />,
-          color: "#3ECF8E",
-        },
+        { name: "Supabase", icon: <SiSupabase />, color: "#3ECF8E" },
+        { name: "Node.js", icon: <SiNodedotjs />, color: "#339933" },
       ],
     },
   ];
@@ -104,53 +64,66 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full py-20 bg-transparent text-white relative"
+      className="w-full py-24 bg-transparent text-white relative"
     >
       <div className="max-w-6xl mx-auto px-4">
+        {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Tech <span className="text-cyan-400">Stack</span>
+          <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase px-3.5 py-1.5 rounded-full liquid-glass-subtle border border-cyan-500/20 mb-3 inline-block">
+            Proficiencies
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mt-2">
+            Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-glow">Stack</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
-          <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life.
+          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-600 mx-auto rounded-full mt-4"></div>
+          <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-base">
+            Modern tools, languages, and frameworks powering my digital creations.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        {/* Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {categories.map((category, catIndex) => (
             <motion.div
               key={catIndex}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: catIndex * 0.1 }}
-              className="xl:bg-transparent bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 hover:border-slate-600 transition-colors"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: catIndex * 0.1 }}
+              className="liquid-glass rounded-3xl p-7 lg:p-8 hover:border-cyan-500/30 transition-all duration-300 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] relative overflow-hidden"
             >
-              <h3 className="text-xl font-bold mb-6 border-b border-slate-700/50 pb-2 bg-gradient-to-b from-cyan-400 to-purple-600 bg-clip-text text-transparent xl:text-left text-center">
+              <h3 className="text-lg font-bold mb-6 pb-3 border-b border-white/[0.08] text-white flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
                 {category.title}
               </h3>
+              
               <div className="flex flex-wrap gap-4">
                 {category.skills.map((skill, index) => (
                   <motion.div
                     key={index}
-                    whileHover={{ scale: 1.05, y: -5 }}
-                    className="flex flex-col items-center gap-2 group cursor-pointer"
+                    whileHover={{ scale: 1.08, y: -4 }}
+                    className="flex flex-col items-center gap-2.5 group cursor-pointer"
                   >
                     <div
-                      className="w-16 h-16 flex items-center justify-center rounded-xl p-3 border border-slate-700/50 group-hover:border-[var(--hover-color)] group-hover:bg-slate-800 transition-all duration-300 shadow-lg shadow-black/20"
+                      className="w-16 h-16 sm:w-18 sm:h-18 flex items-center justify-center rounded-2xl p-3.5 liquid-glass-subtle border border-white/[0.08] group-hover:border-[var(--hover-color)] transition-all duration-300 shadow-md group-hover:shadow-[0_0_20px_-5px_var(--hover-color)]"
                       style={{ "--hover-color": skill.color || "#22d3ee" }}
                     >
-                      <div className="text-3xl text-[var(--hover-color)] transition-colors">
+                      <div 
+                        className="text-3xl transition-transform duration-300 group-hover:scale-110"
+                        style={{ color: skill.color }}
+                      >
                         {skill.icon}
                       </div>
                     </div>
-                    <span className="text-xs font-medium text-slate-400 group-hover:text-[var(--hover-color)] transition-colors text-center w-20 truncate">
+                    <span 
+                      className="text-xs font-medium text-slate-300 group-hover:text-white transition-colors text-center w-20 truncate"
+                    >
                       {skill.name}
                     </span>
                   </motion.div>
