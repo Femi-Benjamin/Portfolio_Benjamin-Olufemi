@@ -65,7 +65,7 @@ const Navbar = () => {
           {isMenuOpen ? <IoClose /> : <IoMenu />}
         </button>
 
-        {/* Mobile Menu Dropdown (Solid Opaque Background for Mobile) */}
+        {/* Mobile Menu Dropdown */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -73,14 +73,14 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -15, scale: 0.96 }}
               transition={{ duration: 0.25 }}
-              className="absolute top-full left-0 right-0 mt-3 p-6 mx-4 bg-slate-950 border border-slate-800/90 rounded-3xl flex flex-col gap-3 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95)] md:hidden z-50"
+              className="absolute top-full left-0 right-0 mt-3 p-5 mx-4 liquid-glass rounded-3xl flex flex-col gap-3 shadow-2xl md:hidden border border-white/10"
             >
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-slate-200 hover:text-cyan-400 font-medium py-3 px-4 rounded-xl bg-slate-900/60 border border-slate-800/60 hover:bg-slate-800/80 transition-all text-center"
+                  className="text-slate-200 hover:text-cyan-400 font-medium py-2.5 px-4 rounded-xl hover:bg-white/[0.04] transition-all text-center"
                 >
                   {link.name}
                 </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 href="https://drive.google.com/file/d/1-QOcPyV8vGU8iDpMXfOnB2YGYXD9otGS/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-center py-3.5 mt-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-2xl text-white font-semibold shadow-lg shadow-cyan-500/25 border border-white/20"
+                className="text-center py-3 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-2xl text-white font-semibold shadow-lg shadow-cyan-500/25 border border-white/20"
               >
                 Download Resume
               </a>
