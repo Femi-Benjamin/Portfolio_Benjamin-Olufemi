@@ -20,13 +20,6 @@ const Hero = () => {
       id="home"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-transparent pt-24 pb-16"
     >
-      {/* Background Spline 3D Scene */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center w-full h-full overflow-hidden pointer-events-auto">
-        <div className="w-[100vw] h-[100vh] max-w-none flex items-center justify-center -translate-y-[4vh]">
-          <Spline
-            scene="https://prod.spline.design/Z31F8KCKhr798Pgt/scene.splinecode"
-            className="w-full h-full flex items-center justify-center"
-          />
       {/* Background Spline 3D Scene (Desktop Only - Zero Mobile Lag) */}
       {isDesktop && (
         <div className="absolute inset-0 z-0 hidden md:flex items-center justify-center w-full h-full overflow-hidden pointer-events-auto">
@@ -39,13 +32,11 @@ const Hero = () => {
         </div>
       )}
 
-      {/* Mobile-Only Static Radiant Glow (Lightweight, No WebGL) */}
+      {/* Mobile-Only Static Radiant Glow (Lightweight, Zero WebGL) */}
       <div className="absolute inset-0 z-0 block md:hidden pointer-events-none">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-tr from-cyan-500/20 via-blue-600/15 to-purple-600/20 blur-3xl rounded-full" />
       </div>
 
-      {/* Ambient Gradient Glow Spotlights */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
       {/* Ambient Gradient Glow Spotlights (Desktop) */}
       <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
 
