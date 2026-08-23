@@ -104,10 +104,33 @@ html {
   }
 }
 
-.animate-fluid-blob {
-  animation: fluid-blob 22s infinite ease-in-out;
+@media (min-width: 768px) {
+  .animate-fluid-blob {
+    animation: fluid-blob 22s infinite ease-in-out;
+  }
+
+  .animate-fluid-blob-slow {
+    animation: fluid-blob 30s infinite ease-in-out reverse;
+  }
 }
 
-.animate-fluid-blob-slow {
-  animation: fluid-blob 30s infinite ease-in-out reverse;
+/* Mobile Performance Acceleration */
+@media (max-width: 767px) {
+  .liquid-glass {
+    background: rgba(15, 23, 42, 0.88) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+
+  .liquid-glass-subtle {
+    background: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+  }
+
+  .liquid-glass-glow {
+    background: rgba(15, 23, 42, 0.9) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
 }

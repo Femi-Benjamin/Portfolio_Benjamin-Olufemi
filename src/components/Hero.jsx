@@ -1,26 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 import { IoArrowForward, IoMailOutline } from "react-icons/io5";
 
 const Hero = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(typeof window !== "undefined" && window.innerWidth >= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
       id="home"
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-transparent pt-24 pb-16"
     >
-      {/* Background Spline 3D Scene */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center w-full h-full overflow-hidden pointer-events-auto">
-        <div className="w-[100vw] h-[100vh] max-w-none flex items-center justify-center -translate-y-[4vh]">
-          <Spline
-            scene="https://prod.spline.design/Z31F8KCKhr798Pgt/scene.splinecode"
-            className="w-full h-full flex items-center justify-center"
-          />
+      {/* Background Spline 3D Scene (Desktop Only - Zero Mobile Lag) */}
+      {isDesktop && (
+        <div className="absolute inset-0 z-0 hidden md:flex items-center justify-center w-full h-full overflow-hidden pointer-events-auto">
+          <div className="w-[100vw] h-[100vh] max-w-none flex items-center justify-center -translate-y-[4vh]">
+            <Spline
+              scene="https://prod.spline.design/Z31F8KCKhr798Pgt/scene.splinecode"
+              className="w-full h-full flex items-center justify-center"
+            />
+          </div>
         </div>
+      )}
+
+      {/* Mobile-Only Static Radiant Glow (Lightweight, No WebGL) */}
+      <div className="absolute inset-0 z-0 block md:hidden pointer-events-none">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-tr from-cyan-500/20 via-blue-600/15 to-purple-600/20 blur-3xl rounded-full" />
       </div>
 
-      {/* Ambient Gradient Glow Spotlights */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
+      {/* Ambient Gradient Glow Spotlights (Desktop) */}
+      <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
 
       {/* Overlay Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 flex flex-col items-center justify-center pointer-events-none">
@@ -52,7 +70,7 @@ const Hero = () => {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]"
           >
             Benjamin{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-500 text-glow">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-500">
               Olufemi
             </span>
           </motion.h1>
@@ -68,8 +86,7 @@ const Hero = () => {
             thoughtful engineering. Specializing in highly performant{" "}
             <span className="text-cyan-300 font-semibold">React</span>,{" "}
             <span className="text-purple-300 font-semibold">Next.js</span>,
-            modern{" "}
-            <span className="text-blue-300 font-semibold">user interface</span>{" "}
+            modern <span className="text-blue-300 font-semibold">UI</span>{" "}
             engineering, and scalable product architecture.
           </motion.p>
 

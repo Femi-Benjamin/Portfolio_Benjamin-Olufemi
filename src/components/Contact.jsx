@@ -2,7 +2,12 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-import { IoMailOutline, IoCallOutline, IoLocationOutline, IoSendOutline } from "react-icons/io5";
+import {
+  IoMailOutline,
+  IoCallOutline,
+  IoLocationOutline,
+  IoSendOutline,
+} from "react-icons/io5";
 import { SocialLinks } from "../data";
 
 const Contact = () => {
@@ -26,9 +31,11 @@ const Contact = () => {
         },
         (error) => {
           console.error("FAILED...", error.text);
-          toast.error("Failed to send email. Please try again or email directly.");
+          toast.error(
+            "Failed to send email. Please try again or email directly.",
+          );
           setIsSubmitting(false);
-        }
+        },
       );
   };
 
@@ -50,11 +57,15 @@ const Contact = () => {
             Start A Conversation
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mt-2">
-            Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-glow">Touch</span>
+            Get in{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-glow">
+              Touch
+            </span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-600 mx-auto rounded-full mt-4"></div>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto text-base">
-            Have a project in mind or want to discuss a new collaboration? I'd love to connect with you.
+            Have a project in mind or want to discuss a new collaboration? I'd
+            love to connect with you.
           </p>
         </motion.div>
 
@@ -69,11 +80,12 @@ const Contact = () => {
           >
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
+                <h3 className="text-2xl font-bold text-white tracking-tight mb-3 text-glow">
                   Let's Build Together
                 </h3>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                  I'm always open to discussing new software opportunities, frontend architecture, and Web3 solutions.
+                  I'm always open to discussing new software opportunities,
+                  frontend architecture, and Web3 solutions.
                 </p>
               </div>
 
@@ -87,7 +99,9 @@ const Contact = () => {
                     <IoMailOutline />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 font-mono uppercase">Email</p>
+                    <p className="text-xs text-slate-400 font-mono uppercase">
+                      Email
+                    </p>
                     <p className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
                       benjaminolufemi16@gmail.com
                     </p>
@@ -100,7 +114,9 @@ const Contact = () => {
                     <IoCallOutline />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 font-mono uppercase">Phone</p>
+                    <p className="text-xs text-slate-400 font-mono uppercase">
+                      Phone
+                    </p>
                     <p className="text-sm font-semibold text-white">
                       08160989601, 08113639891
                     </p>
@@ -113,7 +129,9 @@ const Contact = () => {
                     <IoLocationOutline />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400 font-mono uppercase">Workplace</p>
+                    <p className="text-xs text-slate-400 font-mono uppercase">
+                      Workplace
+                    </p>
                     <p className="text-sm font-semibold text-white">
                       Available Hybrid & Remote Worldwide
                     </p>
@@ -124,7 +142,9 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="pt-8 mt-8 border-t border-white/[0.08]">
-              <p className="text-xs font-mono uppercase text-slate-400 mb-4 tracking-wider">Connect with me</p>
+              <p className="text-xs font-mono uppercase text-slate-400 mb-4 tracking-wider">
+                Connect with me
+              </p>
               <div className="flex gap-3">
                 {SocialLinks.map((link) => (
                   <motion.a
@@ -213,9 +233,25 @@ const Contact = () => {
               >
                 {isSubmitting ? (
                   <>
-                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                    <svg
+                      className="animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v8H4z"
+                      ></path>
                     </svg>
                     <span>Sending Message...</span>
                   </>
