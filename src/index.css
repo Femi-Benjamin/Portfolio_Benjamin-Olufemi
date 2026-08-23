@@ -113,6 +113,7 @@ html {
     animation: fluid-blob 30s infinite ease-in-out reverse;
   }
 }
+
 /* Mobile Performance Acceleration */
 @media (max-width: 767px) {
   .liquid-glass {
