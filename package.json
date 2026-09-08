@@ -1,11 +1,10 @@
 {
-  "name": "portfolio-spline",
+  "name": "portfolio-benjamin-olufemi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "7.29.7",
     "@emailjs/browser": "^4.3.3",
-    "@splinetool/react-spline": "^2.2.6",
-    "@splinetool/runtime": "^1.0.54",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -14,7 +13,6 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.1",
-    "react-reveal": "^1.2.2",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
     "react-vertical-timeline-component": "^3.6.0",
@@ -26,6 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "eslintConfig": {
     "extends": [

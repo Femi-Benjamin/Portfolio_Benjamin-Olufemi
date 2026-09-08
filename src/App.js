@@ -1,33 +1,46 @@
 import React from "react";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "react-vertical-timeline-component/style.min.css"; // Keeping for safety if needed, though we replaced the component
 
-// Components
+// Optical Glass Filters
+import LiquidGlassFilter from "./components/liquid-glass/LiquidGlassFilter";
+
+// Background & Atmospheric Layers
+import BackgroundOrbs from "./components/BackgroundOrbs";
+
+// Page Sections
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Experience from "./components/Experience";
+import Expertise from "./components/Expertise";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import BackgroundOrbs from "./components/BackgroundOrbs";
 
 function App() {
   return (
-    <div className="bg-slate-950 min-h-screen w-full overflow-x-hidden relative">
+    <div className="bg-slate-950 min-h-screen w-full overflow-x-hidden relative text-white selection:bg-cyan-500/30 selection:text-cyan-200">
+      {/* Global SVG optical displacement / refraction definitions */}
+      <LiquidGlassFilter />
+
+      {/* Atmospheric ambient fluid light */}
       <BackgroundOrbs />
-      <ToastContainer theme="dark" position="bottom-right" />
+
+      {/* Floating Liquid Glass Navbar */}
       <Navbar />
+
+      {/* Main Experience Flow */}
       <main>
         <Hero />
         <About />
-        <Experience />
+        <Expertise />
         <Skills />
         <Projects />
+        <Experience />
         <Contact />
       </main>
+
+      {/* Clean Footer */}
       <Footer />
     </div>
   );

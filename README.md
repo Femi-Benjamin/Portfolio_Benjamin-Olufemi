@@ -5,15 +5,14 @@
   <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/Framer_Motion-12-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
-  <img src="https://img.shields.io/badge/Spline_3D-WebGL-FF2D55?style=for-the-badge&logo=spline&logoColor=white" alt="Spline 3D" />
   <img src="https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 
   <p align="center">
-    A futuristic, high-performance personal portfolio built with <b>React</b>, <b>Spline 3D WebGL</b>, <b>Tailwind CSS</b>, and <b>Framer Motion</b>. Engineered with a custom <b>Liquid Glass & Glassmorphism</b> design system.
+    A futuristic, high-performance personal portfolio built with <b>React</b>, <b>Tailwind CSS</b>, and <b>Framer Motion</b>. Engineered with a custom <b>Liquid Glass & Glassmorphism</b> design system.
   </p>
 
   <p align="center">
-    <a href="https://portfolio-benjamin-olufemi.vercel.app/" target="_blank"><strong>🌐 View Live Demo »</strong></a>
+    <a href="https://benjamin-olufemi-portfolio.vercel.app/" target="_blank"><strong>🌐 View Live Demo »</strong></a>
   </p>
 
 </div>
@@ -22,7 +21,7 @@
 
 ## 🌟 Key Features
 
-- **🪐 Centered 3D Spline Interactive Hero:** Integrated real-time WebGL particle sphere with responsive viewport coordinate centering and unblurred typography.
+- **✨ High-Performance Hero:** Ambient gradient glow hero section with fluid typography and interactive call-to-actions.
 - **💎 Liquid Glass Design System:** Custom frosted glass backdrops (`backdrop-blur-2xl`), specular highlights, luminous hover reflections, and animated fluid gradient mesh orbs.
 - **💼 Interactive Work Experience Console:** Master-detail interactive company tabs (`layoutId="activePill"`) with deep-dive achievements, responsibilities, and tech stack tags.
 - **🍱 Liquid Glass Bento Grid (About):** Holographic profile showcase card and interactive metric pill badges (*Years Exp*, *Completed Projects*, *Global Clients*).
@@ -38,7 +37,6 @@
 | :--- | :--- |
 | **Core Framework** | React 18, Create React App |
 | **Styling & Design** | Tailwind CSS v3.4, Custom CSS Glassmorphism Utilities |
-| **3D & WebGL** | `@splinetool/react-spline` |
 | **Animations** | `framer-motion` (Layout animations, viewport triggers, transitions) |
 | **Icons** | `react-icons` (Simple Icons, Ionicons, VS Code Icons) |
 | **Notifications** | `react-toastify` |
@@ -61,7 +59,7 @@ Portfolio_Benjamin-Olufemi/
 │   │   ├── Contact.jsx       # EmailJS form & contact command center
 │   │   ├── Experience.jsx    # Master-detail interactive work console
 │   │   ├── Footer.jsx        # Glassmorphic footer
-│   │   ├── Hero.jsx          # Centered Spline 3D particle hero
+│   │   ├── Hero.jsx          # Hero section with ambient glowing accents
 │   │   ├── Navbar.jsx        # Floating liquid glass pill navigation
 │   │   ├── Projects.jsx      # Filterable project cards
 │   │   └── Skills.jsx        # Tech stack grid with brand glowing tiles

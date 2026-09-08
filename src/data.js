@@ -7,7 +7,6 @@ import {
 } from "react-icons/io5";
 
 import Healthcare from "./images/Healthcare.png";
-import personarise from "./images/personarise.png";
 import elearn from "./images/elearn.png";
 import web3 from "./images/web3.png";
 import web from "./images/web.png";
@@ -122,6 +121,7 @@ export const Projects = [
     name: "WEB3 | FRONTEND PORTFOLIO",
     imageSrc: web,
     techs: "React Js, Typescript, TailwindCSS",
+    category: "WEB3",
     github: "https://github.com/Femi-Benjamin/Benjamin-Olufemi_Web3-Portfolio",
     livelink: "https://benjamin-olufemi-web3-portfolio.vercel.app/",
   },
@@ -130,6 +130,7 @@ export const Projects = [
     name: "MY WEB3 HUB",
     imageSrc: web3,
     techs: "React Js, Typescript, TailwindCSS",
+    category: "WEB3",
     github: "https://github.com/Femi-Benjamin/my-web3-hub",
     livelink: "https://my-web3-hub.vercel.app/",
   },
@@ -138,6 +139,7 @@ export const Projects = [
     name: "TITAN LEAP",
     imageSrc: titan,
     techs: "React Js, Typescript, TailwindCSS",
+    category: "FRONTEND",
     github: "https://github.com/Femi-Benjamin/Titan-leap",
     livelink: "https://titan-leap-ruddy.vercel.app/",
   },
@@ -146,6 +148,7 @@ export const Projects = [
     name: "FAITH VAULT",
     imageSrc: vault,
     techs: "React Js, Typescript, Framer Motion, TailwindCSS",
+    category: "FRONTEND",
     github: "https://github.com/Femi-Benjamin/faith-media-hub",
     livelink: "https://faith-vault.vercel.app/",
   },
@@ -154,6 +157,7 @@ export const Projects = [
     name: "SPENDWISE",
     imageSrc: spendwise,
     techs: "React Js, Typescript, TailwindCSS",
+    category: "FRONTEND",
     github: "https://github.com/Femi-Benjamin/spendwise-your-personal-finance-companion",
     livelink: "https://spendwise-your-personal-finance-com.vercel.app/",
   },
@@ -162,6 +166,7 @@ export const Projects = [
     name: "UNIQUE HAIR TREATMENT",
     imageSrc: unique,
     techs: "React Js, TailwindCSS",
+    category: "FRONTEND",
     github: "https://github.com/Femi-Benjamin/Unique-Hair-Treatment",
     livelink: "https://unique-hair-treatment.vercel.app/",
   },
@@ -170,6 +175,7 @@ export const Projects = [
     name: "CHARM COMMERCE",
     imageSrc: shoe,
     techs: "React Js, TailwindCSS",
+    category: "FRONTEND",
     github: "https://github.com/Femi-Benjamin/charm-commerce-ui",
     livelink: "https://charm-commerce-ui.vercel.app/",
   },
@@ -178,6 +184,7 @@ export const Projects = [
     name: "ARCTIC TRAVEL AGENCY",
     imageSrc: arctic,
     techs: "React Js, TailwindCSS",
+    category: "FRONTEND",
     github: "https://github.com/Femi-Benjamin/arctic_travels",
     livelink: "https://arctic-travels-two.vercel.app/",
   },
@@ -186,6 +193,7 @@ export const Projects = [
     name: "HEALTH CARE MANAGEMENT SYSTEM",
     imageSrc: Healthcare,
     techs: "React Js, TailwindCSS, Material UI, MySQL",
+    category: "FULL STACK",
     github: "https://github.com/Femi-Benjamin/HealthCare_App",
     livelink: "https://healthcare-app.vercel.app/",
   },
@@ -194,6 +202,7 @@ export const Projects = [
     name: "E-LEARNING PLATFORM",
     imageSrc: elearn,
     techs: "React Js, Chakra UI, TailwindCSS",
+    category: "FULL STACK",
     github: "https://github.com/Femi-Benjamin/e-learn_project1",
     livelink: "https://e-learn-project1.vercel.app/",
   },
@@ -202,6 +211,7 @@ export const Projects = [
     name: "Cardify",
     imageSrc: cardify,
     techs: "React Js, TailwindCSS, Chakra UI, Firebase",
+    category: "FULL STACK",
     github: "https://github.com/Femi-Benjamin/Cardify",
     livelink: "https://cardify-bice.vercel.app/",
   },
@@ -210,16 +220,9 @@ export const Projects = [
     name: "Anime Finance 1.0",
     imageSrc: animefinance,
     techs: "React Js, Material UI",
+    category: "FRONTEND",
     github: "https://github.com/Femi-Benjamin/anime-finance",
     livelink: "https://anime-finance-five.vercel.app/",
-  },
-  {
-    id: 13,
-    name: "PERSONARISE WEB APP",
-    imageSrc: personarise,
-    techs: "React Js, Tailwind CSS, Material UI",
-    github: "https://github.com/Femi-Benjamin/Personarise-Project",
-    livelink: "https://personarise.com",
   },
 ];
 

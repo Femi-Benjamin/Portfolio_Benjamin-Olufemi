@@ -1,18 +1,38 @@
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { toast } from "react-toastify";
 import {
   IoMailOutline,
   IoCallOutline,
   IoLocationOutline,
-  IoSendOutline,
+  IoArrowForward,
+  IoCheckmarkCircle,
+  IoAlertCircle,
 } from "react-icons/io5";
 import { SocialLinks } from "../data";
+import LiquidGlass from "./liquid-glass/LiquidGlass";
+import GlassButton from "./liquid-glass/GlassButton";
 
+/**
+ * Contact.jsx
+ * The showpiece section.
+ * - Large Liquid Glass 3 panel container
+ * - Ambient radiant light orbs situated directly behind the glass panel for authentic refraction
+ * - Tactile physical GlassButton with hover sheen, click compression, loading, and success states
+ * - Integrated Liquid Glass animated toast feedback
+ */
 const Contact = () => {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [toastMessage, setToastMessage] = useState(null); // { type: 'success' | 'error', text: '' }
+
+  const showToast = (type, text) => {
+    setToastMessage({ type, text });
+    setTimeout(() => {
+      setToastMessage(null);
+    }, 6000);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,246 +45,250 @@ const Contact = () => {
       })
       .then(
         () => {
-          toast.success("Email sent successfully!");
+          showToast("success", "Message sent successfully! I'll reply within 24 hours.");
           form.current.reset();
           setIsSubmitting(false);
+          setIsSuccess(true);
+          setTimeout(() => setIsSuccess(false), 5000);
         },
         (error) => {
           console.error("FAILED...", error.text);
-          toast.error(
-            "Failed to send email. Please try again or email directly.",
-          );
+          showToast("error", "Failed to send message. Feel free to email me directly.");
           setIsSubmitting(false);
-        },
+        }
       );
   };
 
   return (
     <section
       id="contacts"
-      className="w-full py-24 bg-transparent text-white relative"
+      className="w-full py-28 md:py-36 bg-transparent text-white relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-4">
+      {/* Background Refraction Orbs (Positioned directly behind the glass panel for optical refraction) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/20 via-blue-600/15 to-purple-600/20 rounded-full blur-[130px] pointer-events-none animate-fluid-blob" />
+      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[110px] pointer-events-none" />
+
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase px-3.5 py-1.5 rounded-full liquid-glass-subtle border border-cyan-500/20 mb-3 inline-block">
-            Start A Conversation
+          <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase px-3.5 py-1.5 rounded-full glass-1-subtle border-cyan-500/20 mb-3 inline-block">
+            Start A Collaboration
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mt-2">
-            Get in{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-glow">
-              Touch
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mt-2">
+            LET'S BUILD{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-500 text-glow">
+              SOMETHING GREAT
             </span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-600 mx-auto rounded-full mt-4"></div>
-          <p className="mt-4 text-slate-400 max-w-xl mx-auto text-base">
-            Have a project in mind or want to discuss a new collaboration? I'd
-            love to connect with you.
+          <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-600 mx-auto rounded-full mt-4" />
+          <p className="mt-4 text-slate-300 max-w-lg mx-auto text-base sm:text-lg">
+            Have an idea, high-stakes frontend project, or engineering leadership opportunity?
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
-          {/* Contact Info Card */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="md:col-span-5 liquid-glass rounded-3xl p-8 lg:p-10 flex flex-col justify-between border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] relative overflow-hidden"
+        {/* Showpiece Liquid Glass 3 Container */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <LiquidGlass
+            tier="hero"
+            interactiveLight={false}
+            glow={false}
+            className="rounded-3xl p-8 sm:p-12 lg:p-14 border-white/20 shadow-2xl"
           >
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold text-white tracking-tight mb-3 text-glow">
-                  Let's Build Together
-                </h3>
-                <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                  I'm always open to discussing new software opportunities,
-                  frontend architecture, and Web3 solutions.
-                </p>
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+              {/* Left Column: Direct Info & Social Dock */}
+              <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
+                    Contact Channels
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed mb-8">
+                    Feel free to reach out directly via email or messaging channels. I typically respond within 24 hours.
+                  </p>
 
-              <div className="space-y-4 pt-4">
-                {/* Email Item */}
-                <a
-                  href="mailto:benjaminolufemi16@gmail.com"
-                  className="flex items-center gap-4 p-4 rounded-2xl liquid-glass-subtle hover:border-cyan-500/30 transition-all group"
-                >
-                  <div className="w-12 h-12 rounded-xl liquid-glass-glow flex items-center justify-center text-cyan-400 text-xl group-hover:scale-110 transition-transform">
-                    <IoMailOutline />
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-400 font-mono uppercase">
-                      Email
-                    </p>
-                    <p className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                      benjaminolufemi16@gmail.com
-                    </p>
-                  </div>
-                </a>
-
-                {/* Phone Item */}
-                <div className="flex items-center gap-4 p-4 rounded-2xl liquid-glass-subtle">
-                  <div className="w-12 h-12 rounded-xl liquid-glass-glow flex items-center justify-center text-cyan-400 text-xl">
-                    <IoCallOutline />
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-400 font-mono uppercase">
-                      Phone
-                    </p>
-                    <p className="text-sm font-semibold text-white">
-                      08160989601, 08113639891
-                    </p>
-                  </div>
-                </div>
-
-                {/* Location Item */}
-                <div className="flex items-center gap-4 p-4 rounded-2xl liquid-glass-subtle">
-                  <div className="w-12 h-12 rounded-xl liquid-glass-glow flex items-center justify-center text-cyan-400 text-xl">
-                    <IoLocationOutline />
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-400 font-mono uppercase">
-                      Workplace
-                    </p>
-                    <p className="text-sm font-semibold text-white">
-                      Available Hybrid & Remote Worldwide
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="pt-8 mt-8 border-t border-white/[0.08]">
-              <p className="text-xs font-mono uppercase text-slate-400 mb-4 tracking-wider">
-                Connect with me
-              </p>
-              <div className="flex gap-3">
-                {SocialLinks.map((link) => (
-                  <motion.a
-                    key={link.id}
-                    whileHover={{ scale: 1.15, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    href={link.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-2xl liquid-glass-subtle flex items-center justify-center text-slate-300 hover:text-white hover:border-cyan-400/40 hover:bg-cyan-500/10 transition-all shadow-md"
-                    title={link.name}
-                  >
-                    {link.iconSrc}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="md:col-span-7 liquid-glass rounded-3xl p-8 lg:p-10 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]"
-          >
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="user_name"
-                  id="name"
-                  required
-                  className="w-full liquid-glass-subtle border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition-all font-medium"
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2"
-                >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  name="user_email"
-                  id="email"
-                  required
-                  className="w-full liquid-glass-subtle border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition-all font-medium"
-                  placeholder="john@example.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2"
-                >
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  id="message"
-                  required
-                  rows="4"
-                  className="w-full liquid-glass-subtle border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400/60 focus:ring-2 focus:ring-cyan-400/20 transition-all font-medium resize-none"
-                  placeholder="Tell me about your project or inquiry..."
-                ></textarea>
-              </div>
-
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 text-white font-bold py-4 rounded-2xl shadow-[0_0_25px_-3px_rgba(6,182,212,0.5)] hover:shadow-[0_0_35px_0px_rgba(6,182,212,0.7)] transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 border border-white/20"
-              >
-                {isSubmitting ? (
-                  <>
-                    <svg
-                      className="animate-spin h-5 w-5 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
+                  <div className="space-y-4">
+                    {/* Email item */}
+                    <a
+                      href="mailto:benjaminolufemi16@gmail.com"
+                      className="flex items-center gap-4 p-3.5 rounded-2xl glass-1-subtle hover:border-cyan-400/40 transition-all group"
                     >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8v8H4z"
-                      ></path>
-                    </svg>
-                    <span>Sending Message...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Send Message</span>
-                    <IoSendOutline className="text-lg" />
-                  </>
-                )}
-              </motion.button>
-            </form>
-          </motion.div>
-        </div>
+                      <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-105 transition-transform">
+                        <IoMailOutline />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-[11px] font-mono text-slate-400 uppercase">
+                          Direct Email
+                        </p>
+                        <p className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors truncate">
+                          benjaminolufemi16@gmail.com
+                        </p>
+                      </div>
+                    </a>
+
+                    {/* Phone item */}
+                    <div className="flex items-center gap-4 p-3.5 rounded-2xl glass-1-subtle">
+                      <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-lg">
+                        <IoCallOutline />
+                      </div>
+                      <div>
+                        <p className="text-[11px] font-mono text-slate-400 uppercase">
+                          Telephone
+                        </p>
+                        <p className="text-sm font-semibold text-white">
+                          +234 816 098 9601
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Location item */}
+                    <div className="flex items-center gap-4 p-3.5 rounded-2xl glass-1-subtle">
+                      <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-lg">
+                        <IoLocationOutline />
+                      </div>
+                      <div>
+                        <p className="text-[11px] font-mono text-slate-400 uppercase">
+                          Availability
+                        </p>
+                        <p className="text-sm font-semibold text-white">
+                          Global Remote / Hybrid
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social Dock */}
+                <div className="pt-6 border-t border-white/[0.08]">
+                  <p className="text-xs font-mono uppercase text-slate-400 mb-3 tracking-wider">
+                    Connect online
+                  </p>
+                  <div className="flex gap-2.5">
+                    {SocialLinks.map((link) => (
+                      <motion.a
+                        key={link.id}
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        href={link.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-xl glass-1-subtle border-white/10 flex items-center justify-center text-slate-300 hover:text-white hover:border-cyan-400/50 hover:bg-cyan-500/10 transition-all"
+                        title={link.name}
+                      >
+                        {link.iconSrc}
+                      </motion.a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Physical Glass Form */}
+              <div className="lg:col-span-7">
+                <form ref={form} onSubmit={sendEmail} className="space-y-5">
+                  <div>
+                    <label
+                      htmlFor="contact-name"
+                      className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2"
+                    >
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      name="user_name"
+                      id="contact-name"
+                      required
+                      placeholder="e.g. Satoshi Nakamoto"
+                      className="w-full rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/15 px-4 py-3.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400/70 focus:ring-2 focus:ring-cyan-400/20 transition-all text-sm font-medium"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="contact-email"
+                      className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2"
+                    >
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      name="user_email"
+                      id="contact-email"
+                      required
+                      placeholder="satoshi@domain.com"
+                      className="w-full rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/15 px-4 py-3.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400/70 focus:ring-2 focus:ring-cyan-400/20 transition-all text-sm font-medium"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="contact-message"
+                      className="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2"
+                    >
+                      Project Details
+                    </label>
+                    <textarea
+                      name="message"
+                      id="contact-message"
+                      required
+                      rows="4"
+                      placeholder="Tell me about your product, timeline, and goals..."
+                      className="w-full rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/15 px-4 py-3.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-400/70 focus:ring-2 focus:ring-cyan-400/20 transition-all text-sm font-medium resize-none"
+                    />
+                  </div>
+
+                  {/* Physical Submit Button with tactile states */}
+                  <div className="pt-2">
+                    <GlassButton
+                      type="submit"
+                      variant="primary"
+                      size="lg"
+                      loading={isSubmitting}
+                      success={isSuccess}
+                      icon={<IoArrowForward className="text-lg" />}
+                      className="w-full py-4 text-base"
+                    >
+                      Send Message
+                    </GlassButton>
+                  </div>
+
+                  {/* Liquid Glass Dynamic Feedback Toast */}
+                  <AnimatePresence>
+                    {toastMessage && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        className={`p-4 rounded-2xl flex items-center gap-3 border ${
+                          toastMessage.type === "success"
+                            ? "bg-emerald-950/60 border-emerald-500/40 text-emerald-200 shadow-[0_0_20px_rgba(16,185,129,0.2)]"
+                            : "bg-rose-950/60 border-rose-500/40 text-rose-200 shadow-[0_0_20px_rgba(244,63,94,0.2)]"
+                        }`}
+                      >
+                        {toastMessage.type === "success" ? (
+                          <IoCheckmarkCircle className="text-xl text-emerald-400 flex-shrink-0" />
+                        ) : (
+                          <IoAlertCircle className="text-xl text-rose-400 flex-shrink-0" />
+                        )}
+                        <span className="text-xs sm:text-sm font-medium">
+                          {toastMessage.text}
+                        </span>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </form>
+              </div>
+            </div>
+          </LiquidGlass>
+        </motion.div>
       </div>
     </section>
   );
