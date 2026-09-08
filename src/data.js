@@ -36,7 +36,7 @@ export const Experience = [
     iconsSrc: <IoCodeWorking />,
     job: "Freelance",
     title: "UPWORK",
-    role: "Senior Frontend Engineer",
+    role: "Frontend Engineer",
     location: "Akwa Ibom, Nigeria",
     description:
       "Delivering high-performance modern web applications for global clients on the largest network of independent professionals.",
@@ -45,7 +45,14 @@ export const Experience = [
       "Achieved 100% job success rating by delivering pixel-perfect, responsive UIs with optimized Web Vitals.",
       "Integrated complex REST & GraphQL APIs, smart contract interfaces, and state management solutions.",
     ],
-    skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "REST APIs"],
+    skills: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "REST APIs",
+    ],
   },
   {
     id: 2,
@@ -62,7 +69,13 @@ export const Experience = [
       "Implemented secure role-based access control views and patient data visualization charts.",
       "Optimized frontend rendering speeds by 40% using modular component design.",
     ],
-    skills: ["React.js", "Material UI", "Tailwind CSS", "MySQL", "State Management"],
+    skills: [
+      "React.js",
+      "Material UI",
+      "Tailwind CSS",
+      "MySQL",
+      "State Management",
+    ],
   },
   {
     id: 3,
@@ -79,7 +92,13 @@ export const Experience = [
       "Collaborated with product designers to implement responsive Figma designs with 100% pixel fidelity.",
       "Enhanced mobile user retention by 25% through refined touch interactions and layout optimizations.",
     ],
-    skills: ["React.js", "Tailwind CSS", "Material UI", "Framer Motion", "JavaScript"],
+    skills: [
+      "React.js",
+      "Tailwind CSS",
+      "Material UI",
+      "Framer Motion",
+      "JavaScript",
+    ],
   },
   {
     id: 4,
@@ -158,7 +177,8 @@ export const Projects = [
     imageSrc: spendwise,
     techs: "React Js, Typescript, TailwindCSS",
     category: "FRONTEND",
-    github: "https://github.com/Femi-Benjamin/spendwise-your-personal-finance-companion",
+    github:
+      "https://github.com/Femi-Benjamin/spendwise-your-personal-finance-companion",
     livelink: "https://spendwise-your-personal-finance-com.vercel.app/",
   },
   {

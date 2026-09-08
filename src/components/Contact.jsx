@@ -45,7 +45,10 @@ const Contact = () => {
       })
       .then(
         () => {
-          showToast("success", "Message sent successfully! I'll reply within 24 hours.");
+          showToast(
+            "success",
+            "Message sent successfully! I'll reply within 24 hours.",
+          );
           form.current.reset();
           setIsSubmitting(false);
           setIsSuccess(true);
@@ -53,9 +56,12 @@ const Contact = () => {
         },
         (error) => {
           console.error("FAILED...", error.text);
-          showToast("error", "Failed to send message. Feel free to email me directly.");
+          showToast(
+            "error",
+            "Failed to send message. Feel free to email me directly.",
+          );
           setIsSubmitting(false);
-        }
+        },
       );
   };
 
@@ -82,13 +88,14 @@ const Contact = () => {
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mt-2">
             LET'S BUILD{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-500 text-glow">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-500">
               SOMETHING GREAT
             </span>
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-600 mx-auto rounded-full mt-4" />
           <p className="mt-4 text-slate-300 max-w-lg mx-auto text-base sm:text-lg">
-            Have an idea, high-stakes frontend project, or engineering leadership opportunity?
+            Have an idea, high-stakes frontend project, or engineering
+            leadership opportunity?
           </p>
         </motion.div>
 
@@ -113,7 +120,8 @@ const Contact = () => {
                     Contact Channels
                   </h3>
                   <p className="text-slate-300 text-sm leading-relaxed mb-8">
-                    Feel free to reach out directly via email or messaging channels. I typically respond within 24 hours.
+                    Feel free to reach out directly via email or messaging
+                    channels. I typically respond within 24 hours.
                   </p>
 
                   <div className="space-y-4">
@@ -145,7 +153,7 @@ const Contact = () => {
                           Telephone
                         </p>
                         <p className="text-sm font-semibold text-white">
-                          +234 816 098 9601
+                          +234 8113639891
                         </p>
                       </div>
                     </div>

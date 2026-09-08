@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ben from "../images/ben.jpg";
-import { IoCodeSlashOutline, IoLayersOutline, IoSparklesOutline } from "react-icons/io5";
+import {
+  IoCodeSlashOutline,
+  IoLayersOutline,
+  IoSparklesOutline,
+} from "react-icons/io5";
 import CountUp from "./animations/CountUp";
 import LiquidGlass from "./liquid-glass/LiquidGlass";
 
@@ -55,7 +59,10 @@ const About = () => {
             Engineering Credibility
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mt-2">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-glow">Benjamin</span>
+            About{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300 text-glow">
+              Benjamin
+            </span>
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-600 mx-auto rounded-full mt-4" />
         </motion.div>
@@ -118,10 +125,16 @@ const About = () => {
                 Crafting modern, reliable web applications that scale.
               </h3>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                I'm a Frontend & Web3 engineer dedicated to bridging rigorous software engineering with fluid, Apple-standard design fidelity. Over the last 3.5+ years, I've built mission-critical interfaces for international clients across Upwork, healthcare platforms, and Web3 ecosystems.
+                I'm a Frontend & Web3 engineer dedicated to bridging rigorous
+                software engineering with fluid, Apple-standard design fidelity.
+                Over the last 3.5+ years, I've built mission-critical interfaces
+                for international clients across Upwork, healthcare platforms,
+                and Web3 ecosystems.
               </p>
               <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed">
-                My architectural philosophy centers on clean modularity, micro-interaction craftsmanship, optimized Core Web Vitals, and responsive layouts that perform seamlessly across all screens.
+                My architectural philosophy centers on clean modularity,
+                micro-interaction craftsmanship, optimized Core Web Vitals, and
+                responsive layouts that perform seamlessly across all screens.
               </p>
             </div>
 

@@ -16,7 +16,7 @@ const Experience = () => {
     id: 1,
     job: "Freelance",
     title: "UPWORK",
-    role: "Senior Frontend Engineer",
+    role: "Frontend Engineer",
     date: "2021 - Present",
     location: "Nigeria",
     description: "Frontend Engineer delivering high-performance modern web applications.",

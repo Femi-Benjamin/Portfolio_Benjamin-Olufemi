@@ -41,7 +41,8 @@ const Hero = () => {
     const element = document.getElementById(targetId);
     if (element) {
       const yOffset = -70;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
     if (window.location.hash) {
@@ -61,14 +62,14 @@ const Hero = () => {
       </div>
 
       {/* Atmospheric Ambient Glow (Tracks cursor subtly by 2-8px on desktop) */}
-      <motion.div
+      {/* <motion.div
         style={{ x: ambientX, y: ambientY }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none hidden md:block"
       />
       <motion.div
         style={{ x: ambientY, y: ambientX }}
         className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-purple-600/10 blur-[140px] rounded-full pointer-events-none hidden md:block"
-      />
+      /> */}
 
       {/* Mobile Ambient Glow */}
       <div className="absolute inset-0 z-0 block md:hidden pointer-events-none">
@@ -81,7 +82,12 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0.2 }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 25,
+            delay: 0.2,
+          }}
           className="mb-6"
         >
           <LiquidGlass
@@ -106,7 +112,12 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 320, damping: 26, delay: 0.3 }}
+          transition={{
+            type: "spring",
+            stiffness: 320,
+            damping: 26,
+            delay: 0.3,
+          }}
           className="text-xs sm:text-sm font-mono tracking-widest text-cyan-400 uppercase mb-3"
         >
           Frontend & Web3 Developer
@@ -116,11 +127,16 @@ const Hero = () => {
         <motion.h1
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 280, damping: 24, delay: 0.4 }}
+          transition={{
+            type: "spring",
+            stiffness: 280,
+            damping: 24,
+            delay: 0.4,
+          }}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.08] mb-6"
         >
           Benjamin{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-500 text-glow">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-sky-200 to-purple-200">
             Olufemi
           </span>
         </motion.h1>
@@ -129,21 +145,32 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0.55 }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 25,
+            delay: 0.55,
+          }}
           className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10 font-normal"
         >
           Building high-performance digital experiences for the modern web.
           Specializing in pixel-perfect{" "}
           <span className="text-cyan-300 font-semibold">React</span>, scalable{" "}
           <span className="text-purple-300 font-semibold">Next.js</span>, and
-          frictionless <span className="text-sky-300 font-semibold">Web3 UX</span>.
+          frictionless{" "}
+          <span className="text-sky-300 font-semibold">Web3 UX</span>.
         </motion.p>
 
         {/* 0.75s: Selective Liquid Glass CTA Button Cluster */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 320, damping: 24, delay: 0.75 }}
+          transition={{
+            type: "spring",
+            stiffness: 320,
+            damping: 24,
+            delay: 0.75,
+          }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full sm:w-auto"
         >
           <GlassButton

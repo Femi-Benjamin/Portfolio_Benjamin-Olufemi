@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         {/* Minimal Glass Social Dock */}
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           {SocialLinks.map((link) => (
             <a
               key={link.id}
@@ -35,10 +35,11 @@ const Footer = () => {
               {link.iconSrc}
             </a>
           ))}
-        </div>
+        </div> */}
 
         <p className="text-slate-500 text-xs font-mono">
-          &copy; {new Date().getFullYear()} Benjamin Olufemi. All rights reserved.
+          &copy; {new Date().getFullYear()} Benjamin Olufemi. All rights
+          reserved.
         </p>
       </div>
     </footer>
