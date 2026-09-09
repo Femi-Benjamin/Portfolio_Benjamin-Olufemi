@@ -9,13 +9,6 @@ import {
 import CountUp from "./animations/CountUp";
 import LiquidGlass from "./liquid-glass/LiquidGlass";
 
-/**
- * About.jsx
- * High-credibility introduction section.
- * - Clean portrait image with subtle glow (NOT trapped inside a glass box)
- * - Three floating Liquid Glass credibility cards with animated numeric counters (0 -> 3.5, 0 -> 20, 0 -> 15)
- * - Clear editorial typography
- */
 const About = () => {
   const stats = [
     {

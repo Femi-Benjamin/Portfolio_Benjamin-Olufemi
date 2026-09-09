@@ -1,26 +1,13 @@
 import React, { useEffect } from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { IoArrowForward, IoMailOutline } from "react-icons/io5";
 import GlassButton from "./liquid-glass/GlassButton";
 import LiquidGlass from "./liquid-glass/LiquidGlass";
 
-/**
- * Hero.jsx
- * The visual centerpiece of the website.
- * Features:
- * - Clean, crisp typography (NOT trapped in glass)
- * - Atmospheric background: subtle gradient, animated cyber grid, slow fluid light movement
- * - Selective Liquid Glass for interactive CTAs and status indicator
- * - Orchestrated spring sequence (0.0s -> 1.0s)
- * - Subtle desktop cursor follow (2-8px)
- */
 const Hero = () => {
   // Subtle pointer parallax (2-8px)
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-
-  const ambientX = useTransform(mouseX, [-500, 500], [-8, 8]);
-  const ambientY = useTransform(mouseY, [-500, 500], [-8, 8]);
 
   useEffect(() => {
     const handleMouseMove = (e) => {

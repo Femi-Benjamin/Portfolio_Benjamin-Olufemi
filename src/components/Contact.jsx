@@ -13,14 +13,6 @@ import { SocialLinks } from "../data";
 import LiquidGlass from "./liquid-glass/LiquidGlass";
 import GlassButton from "./liquid-glass/GlassButton";
 
-/**
- * Contact.jsx
- * The showpiece section.
- * - Large Liquid Glass 3 panel container
- * - Ambient radiant light orbs situated directly behind the glass panel for authentic refraction
- * - Tactile physical GlassButton with hover sheen, click compression, loading, and success states
- * - Integrated Liquid Glass animated toast feedback
- */
 const Contact = () => {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);

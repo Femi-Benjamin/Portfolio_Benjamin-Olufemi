@@ -10,22 +10,30 @@ import {
 } from "react-icons/io5";
 
 const Experience = () => {
-  const data = Array.isArray(ExperienceData) && ExperienceData.length > 0 ? ExperienceData : [];
+  const data =
+    Array.isArray(ExperienceData) && ExperienceData.length > 0
+      ? ExperienceData
+      : [];
   const [selectedId, setSelectedId] = useState(data[0]?.id || 1);
-  const activeExp = data.find((item) => item.id === selectedId) || data[0] || {
-    id: 1,
-    job: "Freelance",
-    title: "UPWORK",
-    role: "Frontend Engineer",
-    date: "2021 - Present",
-    location: "Nigeria",
-    description: "Frontend Engineer delivering high-performance modern web applications.",
-    highlights: [],
-    skills: ["React.js", "Next.js", "TypeScript"]
-  };
+  const activeExp = data.find((item) => item.id === selectedId) ||
+    data[0] || {
+      id: 1,
+      job: "Freelance",
+      title: "UPWORK",
+      role: "Frontend Engineer",
+      date: "2021 - Present",
+      location: "Nigeria",
+      description:
+        "Frontend Engineer delivering high-performance modern web applications.",
+      highlights: [],
+      skills: ["React.js", "Next.js", "TypeScript"],
+    };
 
   return (
-    <section id="experience" className="w-full py-24 bg-transparent text-white relative overflow-hidden">
+    <section
+      id="experience"
+      className="w-full py-24 bg-transparent text-white relative overflow-hidden"
+    >
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none" />
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-purple-600/10 blur-[130px] rounded-full pointer-events-none" />
@@ -43,11 +51,15 @@ const Experience = () => {
             Career Trajectory
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mt-2">
-            Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-glow">Experience</span>
+            Work{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 text-glow">
+              Experience
+            </span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 via-sky-400 to-purple-600 mx-auto rounded-full mt-4"></div>
           <p className="text-slate-400 max-w-xl mx-auto mt-4 text-base">
-            Click on each organization to explore key achievements, responsibilities, and technologies used.
+            Click on each organization to explore key achievements,
+            responsibilities, and technologies used.
           </p>
         </motion.div>
 
@@ -87,9 +99,11 @@ const Experience = () => {
                     </span>
                   </div>
 
-                  <h3 className={`text-base font-bold tracking-tight transition-colors ${
-                    isSelected ? "text-white text-glow" : "text-slate-300"
-                  }`}>
+                  <h3
+                    className={`text-base font-bold tracking-tight transition-colors ${
+                      isSelected ? "text-white text-glow" : "text-slate-300"
+                    }`}
+                  >
                     {item.title}
                   </h3>
                   <p className="text-xs text-slate-400 mt-1 truncate">
@@ -155,7 +169,10 @@ const Experience = () => {
                     </h4>
                     <div className="space-y-2.5">
                       {activeExp.highlights.map((highlight, idx) => (
-                        <div key={idx} className="flex items-start gap-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+                        <div
+                          key={idx}
+                          className="flex items-start gap-3 text-slate-300 text-sm sm:text-base leading-relaxed"
+                        >
                           <IoCheckmarkCircle className="text-cyan-400 text-lg flex-shrink-0 mt-0.5" />
                           <span>{highlight}</span>
                         </div>

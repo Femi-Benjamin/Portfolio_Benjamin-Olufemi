@@ -38,7 +38,8 @@ const Navbar = () => {
       const element = document.getElementById(targetId);
       if (element) {
         const yOffset = -70;
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
@@ -68,8 +69,8 @@ const Navbar = () => {
           isMenuOpen
             ? "bg-slate-950 border-white/20 py-2.5 px-5 sm:px-6 shadow-[0_12px_32px_rgba(0,0,0,0.8)]"
             : isScrolled
-            ? "glass-2-interactive py-2.5 px-5 sm:px-6 border-white/20 shadow-[0_12px_32px_rgba(0,0,0,0.5)]"
-            : "glass-1-subtle py-3 px-5 sm:px-7 border-white/10 hover:border-white/20"
+              ? "glass-2-interactive py-2.5 px-5 sm:px-6 border-white/20 shadow-[0_12px_32px_rgba(0,0,0,0.5)]"
+              : "glass-1-subtle py-3 px-5 sm:px-7 border-white/10 hover:border-white/20"
         }`}
       >
         {/* BO Monogram / Brand */}

@@ -1,10 +1,5 @@
 import React from "react";
-import { SocialLinks } from "../data";
 
-/**
- * Footer.jsx
- * Clean, non-distracting footer with minimal glass social dock.
- */
 const Footer = () => {
   return (
     <footer className="w-full py-12 bg-slate-950/80 backdrop-blur-md border-t border-white/[0.06] text-center relative overflow-hidden">
