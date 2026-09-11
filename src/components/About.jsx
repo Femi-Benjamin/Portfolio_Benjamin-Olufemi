@@ -95,7 +95,7 @@ const About = () => {
                         Benjamin Olufemi
                       </h3>
                       <p className="text-xs text-cyan-300 font-mono">
-                        Frontend & Web3 Architect
+                        Frontend & Web3 UI Architect
                       </p>
                     </div>
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
@@ -118,13 +118,13 @@ const About = () => {
                 Crafting modern, reliable web applications that scale.
               </h3>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                I'm a Frontend & Web3 engineer dedicated to bridging rigorous
-                software engineering with fluid, Apple-standard design fidelity.
-                Over the last 3.5+ years, I've built mission-critical interfaces
-                for international clients across Upwork, healthcare platforms,
-                and Web3 ecosystems.
+                I’m a Frontend & Web3 UI engineer specializing in the
+                intersection of scalable architecture and fluid, high-fidelity
+                interaction design. Backed by 3.5+ years of experience, I build
+                resilient, production-ready interfaces that turn complex systems
+                into seamless user experiences.
               </p>
-              <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
                 My architectural philosophy centers on clean modularity,
                 micro-interaction craftsmanship, optimized Core Web Vitals, and
                 responsive layouts that perform seamlessly across all screens.

@@ -96,7 +96,7 @@ const Hero = () => {
         </motion.div>
 
         {/* 0.3s: Eyebrow */}
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -107,8 +107,8 @@ const Hero = () => {
           }}
           className="text-xs sm:text-sm font-mono tracking-widest text-cyan-400 uppercase mb-3"
         >
-          Frontend & Web3 Developer
-        </motion.p>
+           Benjamin Olufemi
+        </motion.p> */}
 
         {/* 0.4s: Main Name Headline */}
         <motion.h1
@@ -122,9 +122,9 @@ const Hero = () => {
           }}
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-[1.08] mb-6"
         >
-          Benjamin{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 via-sky-200 to-purple-200">
-            Olufemi
+          Frontend{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-100 via-sky-100 to-purple-100">
+            Engineer
           </span>
         </motion.h1>
 
@@ -145,7 +145,7 @@ const Hero = () => {
           <span className="text-cyan-300 font-semibold">React</span>, scalable{" "}
           <span className="text-purple-300 font-semibold">Next.js</span>, and
           frictionless{" "}
-          <span className="text-sky-300 font-semibold">Web3 UX</span>.
+          <span className="text-sky-300 font-semibold">Web3 UI</span>.
         </motion.p>
 
         {/* 0.75s: Selective Liquid Glass CTA Button Cluster */}
